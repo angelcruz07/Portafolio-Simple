@@ -69,21 +69,21 @@
    transition: all 300ms;
  }
  /* Posicionamiento del la imagen con el texto */
+ /* Uso de grid */
  .container__info {
-   position: relative;
-   top:150px;
-   display: flex;
-   align-items: center;
+  position: relative;
+  top: 150px;
+  display: grid;
+  grid-template-columns: 250px  1fr;
  }
  .image {
-   flex: 0 0 auto;
-   margin-right: 20px;
-   margin-left: 70px;
- }
- .content {
-   flex: 1 1 auto;
-   padding: 20px 20px;
- }
+  margin-right: 20px;
+  margin-left: 70px;
+}
+.content {
+  flex: 1 1 auto;
+  padding: 30px 80px;
+} 
  .button {
    background-color: #FFC900;
    margin-top: 30px;
@@ -115,7 +115,7 @@
    grid-template-columns: repeat(4, 1fr); /* Dos columnas con tamaño flexible */
     grid-gap: 5px; /* Espacio entre los contenedores */
   } 
- .proyectos {
+ .proyectos{
    background-color: #191919; /* Color de fondo de los contenedores */
    color: #fff;
    /* Espacio interno de los contenedores */
@@ -124,7 +124,7 @@
    max-width: 250px;
    border-radius: 10px;
  }
- .proyectos img{
+ .proyectos img ,.video{
    border-radius: 10px;
  }
  .title-big {
@@ -148,17 +148,164 @@
    text-transform: uppercase;
    font-size: medium;
    padding:10px 15px;
+   font-weight: 600
 }
  .text__portafolio{
    font-size: 10px;
    margin: 5px 10px;
  }
+
+ /* Experiencia y habilidades */
+
+
  .container__skills{
    position: relative;
    top: 200px;
    background-color: #fff;
    color:#000;
+   padding-bottom: 50px;
  }
- .container__contacto{
-   background-color:#FFC900;
+ .titles--exp  {
+   padding: 15px;
+   text-align: center;
+   font-size: 50px;
+   text-transform: uppercase;
+
  }
+.titles--exp span{
+  color:#999999;
+
+}
+.flex__text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.text_exp {
+   text-align: center;
+   justify-content: center;
+   color:#999;
+}
+
+ .skills {
+  background-color: #222;
+  border-radius: 15px;
+  color:#808080; 
+  padding: 10px 15px;
+  margin-bottom: 30px;
+ }
+ .skills h1 {
+  color:#fff;
+ }
+ .skills h2 {
+  margin-bottom: 5px;
+ }
+ .skills h3 {
+  margin-bottom: 20px;
+ }
+ .skills span {
+  margin-bottom: 20px;
+ }
+ .skills ul {
+  display: flex;
+  justify-content: flex-end;
+ }
+ .skills li{ 
+  height: 30px;
+  list-style: none;
+ }
+ .skills-img img{
+  width: 15px;
+  height: 15px;
+ }
+ .grid__exp {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 30px;
+  justify-content: space-between;
+  align-content: space-around;
+  margin-left: 70px;
+  margin-right: 70px;
+ }
+
+
+
+/* Area de contacto */
+.container__form{
+  position: relative;
+  top:180px;
+  background-color: #FFC900;
+  height: 600px;
+}
+.container__titulos{
+  width:300px;
+  padding: 20px 80px;
+}
+.container__titulos p {
+  color:#999;
+
+}
+.title__form {
+  color:#000;
+  font-size:50px;
+}
+.contend{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.form {
+  float:right;
+  margin-bottom: 60px;
+}
+.etiquetas {
+  color:#000; 
+  font-weight: 600;
+  padding-right: 15px;
+}
+.input ,.textarea {
+  float: right;
+  border-radius: 10px;
+  border: none;
+}
+.textarea {
+  width: 196px;
+  height: 79px;
+  resize: none;
+}
+.container_button{
+  position: relative;
+  top:30px;
+}
+.button-2 {
+  background-color: #222222;
+  color:#fff; 
+}
+
+.content__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7d7979;
+}
+
+.image {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.text {
+  flex: 1;
+  padding: 5px 5px;
+}
+
+footer {
+  background-color: #222;
+  position: relative;
+  top: 200px;
+
+}
